@@ -7,6 +7,16 @@ export const AddBook = createAction(
   props<{ id: string; title: string; author: string }>()
 );
 
+export const AddBookSuccess = createAction(
+  '[Book] Book is Successfully Added',
+  props<{ id: string; title: string; author: string }>()
+);
+  
+export const AddBookFailure = createAction(
+  '[Book] Add Book Failed',
+  props<{error:any}>()
+);
+
 // Define the action for editing a book
 export const EditBook = createAction(
   '[Book] Edit Book',
